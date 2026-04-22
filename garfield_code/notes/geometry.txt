@@ -1,0 +1,61 @@
+Geometry
+
+this are the parameters we can vary to get different results
+
+draw pic
+
+----------
+ . . . . 
+----------
+
+x right, y up, z out of page
+in the center, approximate it as extending infinitely in the x and z directions
+
+wire
+- wire pitch - how far away the wires are from each other (in the x direction)
+    - go w 3 mm
+- fixed: wire diameter - 20 um
+- how many wires - this just sets the effective detector area. you'd probably determine this from your desired detector area
+- other: material is gold-plated tungsten. tungsten for conductivity (I think), gold-plated for corrosion resistance (explain)
+- guard wires? field-shaping wires?
+
+volume
+- anode-cathode gap - the distance (in the z direction) between the anode wires and the cathode plates on the top and bottom. The mwpc has reflection symmetry about the xz plane ie the gap btwn the bottom plate and the wires is equal to the gap between the wires and the top plate
+- effective detector area - how big of an area that the detector can catch muons
+- how much margin - there should be space (in the x direction) between the chamber frame and the leftmost wire, and the rightmost wire and the chamber frame. The electric field could get messed up by microscopic irregularities on the inner wall of the chamber frame. give it some space so the electric field dies out before it reaches the wall. - 3 cm is probably fine
+
+gas
+- fixed: gas compounds: what compounds are in the gas - Argon and carbon dioxide
+- fixed: gas ratio: the ratio of compounds in the gas - 75% argon 25% carbon dioxide
+- fixed, low priority / confirm once and it'll be fine: gas purity - if the detector has even a very small amount of O2, it will ruin the gain
+
+electrical
+- anode voltage - how much (positive) voltage to have on the anode wires - 1-4kV
+
+---
+driven values / outputs
+
+
+
+
+
+analytic stuff
+- chamber inner volume: effective detector area + 2 * margin
+- chamber inner height: anode-cathode gap * 2
+- chamber inner volume is the volume that the gas fills, not counting the extent of the chamber frame itself
+
+garfield++ stuff
+- gain: ?. set by voltage, gas ratio, gas purity, materials
+
+geant4 stuff- charge distribution - get histogram/kde of charge 
+
+
+questions
+- is gas ratio by weight or moles
+- for wires. why tungsten, why gold-plated.
+- should we have guard wires? should we have field wires?
+- is gain how many electrons per muon or how many electrons per primary electron - answer: per primary electron
+- how to determine gain from garfield++? Do I need full AvalancheMicroscopic?
+    - answer: generate many AvalancheElectron's from a constant point in the low field region / far away (probably right below top cathode plate at (0, gap - 1.e-4, 0)). get the ne from each AvalancheElectron, sum them, and divide by the number of primary electrons = number of times you called AvalancheElectron. You don't create a muon for this, since muons create primary electrons at many places along it's trajectory. "the" gain of a detector is measured using a radioactive source placed in one spot
+- geant4 sensitivedetector - one muon's trajectory vs event (bookended by Initialize and EndOfEvent) vs step (many per event, one step per ProcessHits)
+    - ?answer: I think one initial muon can spawn high energy secondaries / "delta particles" which are electrons with their own trajectories. anything in a step's "edep" is just electrons that the muon ionized that fail to have enough energy for geant4 to track it separately, so it all just gets dumped into the float eDep. You then divide by W to get the number of electrons created, and then you maybe AvalancheElectron *that*. so does garfield++'s TrackHeed neglect the trajectory-having electrons? anyway, to get the charge, do you add up the edeps? no bc the edeps consist of electrons that ionize other electrons, so more electrons gen ionized than gets captured by the edep right?

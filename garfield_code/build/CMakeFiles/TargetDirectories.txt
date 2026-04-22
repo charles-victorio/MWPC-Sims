@@ -1,0 +1,4 @@
+/home/charles/geant4test2/proj1/garfield_code/build/CMakeFiles/gainSim.dir
+/home/charles/geant4test2/proj1/garfield_code/build/CMakeFiles/mwpcMicro.dir
+/home/charles/geant4test2/proj1/garfield_code/build/CMakeFiles/edit_cache.dir
+/home/charles/geant4test2/proj1/garfield_code/build/CMakeFiles/rebuild_cache.dir

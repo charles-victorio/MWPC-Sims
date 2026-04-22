@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/charles/geant4test2/proj1/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
