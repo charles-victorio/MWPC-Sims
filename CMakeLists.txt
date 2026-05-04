@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 4.3 FATAL_ERROR)
 project(Tutorial)
 
 find_package(Geant4 REQUIRED ui_all vis_all)
+find_package(Garfield REQUIRED)
 
 include(${Geant4_USE_FILE})
 
@@ -15,5 +16,6 @@ file(COPY ${MACRO_FILES} DESTINATION ${CMAKE_BINARY_DIR}/)
 
 add_executable(sim sim.cc ${sources})
 target_link_libraries(sim ${Geant4_LIBRARIES})
+target_link_libraries(sim ${Geant4_LIBRARIES} Garfield::Garfield)
 
 add_custom_target(Tutorial DEPENDS sim)
