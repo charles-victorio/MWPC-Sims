@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/charles/geant4test2/proj1/garfield_code/build/cmake_install.cmake"
+		"/home/vitrum/Physics/MWPC-Sims/garfield_code/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

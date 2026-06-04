@@ -1,5 +1,5 @@
 CMakeFiles/gainSim.dir/gainSim.cc.o: \
- /home/charles/geant4test2/proj1/garfield_code/gainSim.cc \
+ /home/vitrum/Physics/MWPC-Sims/garfield_code/gainSim.cc \
  /usr/include/stdc-predef.h /usr/include/c++/13/fstream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -157,106 +157,45 @@ CMakeFiles/gainSim.dir/gainSim.cc.o: \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/charles/garfieldpp/root/include/TCanvas.h \
- /home/charles/garfieldpp/root/include/TPad.h \
- /home/charles/garfieldpp/root/include/TVirtualPad.h \
- /home/charles/garfieldpp/root/include/TObject.h \
- /home/charles/garfieldpp/root/include/Rtypes.h \
- /home/charles/garfieldpp/root/include/RtypesCore.h \
- /home/charles/garfieldpp/root/include/ROOT/RConfig.hxx \
- /home/charles/garfieldpp/root/include/RVersion.h \
- /home/charles/garfieldpp/root/include/ROOT/RVersion.hxx \
- /home/charles/garfieldpp/root/include/RConfigure.h \
- /home/charles/garfieldpp/root/include/DllImport.h \
- /home/charles/garfieldpp/root/include/strtok.h \
+ /home/vitrum/Physics/root-install/include/TCanvas.h \
+ /home/vitrum/Physics/root-install/include/TPad.h \
+ /home/vitrum/Physics/root-install/include/TVirtualPad.h \
+ /home/vitrum/Physics/root-install/include/TObject.h \
+ /home/vitrum/Physics/root-install/include/Rtypes.h \
+ /home/vitrum/Physics/root-install/include/RtypesCore.h \
+ /home/vitrum/Physics/root-install/include/ROOT/RConfig.hxx \
+ /home/vitrum/Physics/root-install/include/RVersion.h \
+ /home/vitrum/Physics/root-install/include/ROOT/RVersion.hxx \
+ /home/vitrum/Physics/root-install/include/RConfigure.h \
+ /home/vitrum/Physics/root-install/include/DllImport.h \
+ /home/vitrum/Physics/root-install/include/strtok.h \
  /usr/include/c++/13/cstring /usr/include/string.h /usr/include/strings.h \
- /home/charles/garfieldpp/root/include/strlcpy.h \
- /home/charles/garfieldpp/root/include/snprintf.h \
+ /home/vitrum/Physics/root-install/include/strlcpy.h \
+ /home/vitrum/Physics/root-install/include/snprintf.h \
  /usr/include/c++/13/atomic /usr/include/c++/13/bits/atomic_base.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
- /home/charles/garfieldpp/root/include/TGenericClassInfo.h \
- /home/charles/garfieldpp/root/include/TSchemaHelper.h \
- /home/charles/garfieldpp/root/include/TIsAProxy.h \
- /home/charles/garfieldpp/root/include/TVirtualIsAProxy.h \
- /home/charles/garfieldpp/root/include/TStorage.h \
- /home/charles/garfieldpp/root/include/TVersionCheck.h \
- /home/charles/garfieldpp/root/include/RVersion.h \
- /usr/include/c++/13/cstdarg \
- /home/charles/garfieldpp/root/include/TAttLine.h \
- /home/charles/garfieldpp/root/include/TAttFill.h \
- /home/charles/garfieldpp/root/include/TAttPad.h \
- /home/charles/garfieldpp/root/include/TQObject.h \
- /home/charles/garfieldpp/root/include/TList.h \
- /home/charles/garfieldpp/root/include/TSeqCollection.h \
- /home/charles/garfieldpp/root/include/TCollection.h \
- /home/charles/garfieldpp/root/include/TIterator.h \
- /home/charles/garfieldpp/root/include/TString.h \
- /home/charles/garfieldpp/root/include/ROOT/TypeTraits.hxx \
- /usr/include/c++/13/memory /usr/include/c++/13/bits/stl_tempbuf.h \
- /usr/include/c++/13/bits/stl_raw_storage_iter.h \
- /usr/include/c++/13/bits/align.h /usr/include/c++/13/bits/unique_ptr.h \
- /usr/include/c++/13/bits/shared_ptr.h \
- /usr/include/c++/13/bits/shared_ptr_base.h \
- /usr/include/c++/13/bits/allocated_ptr.h \
- /usr/include/c++/13/ext/aligned_buffer.h \
- /usr/include/c++/13/ext/concurrence.h \
- /usr/include/c++/13/bits/shared_ptr_atomic.h \
- /usr/include/c++/13/backward/auto_ptr.h \
- /usr/include/c++/13/pstl/glue_memory_defs.h \
- /usr/include/c++/13/pstl/execution_defs.h \
- /home/charles/garfieldpp/root/include/TVirtualRWMutex.h \
- /home/charles/garfieldpp/root/include/TVirtualMutex.h \
- /home/charles/garfieldpp/root/include/ROOT/RRangeCast.hxx \
- /home/charles/garfieldpp/root/include/ROOT/RSpan.hxx \
- /home/charles/garfieldpp/root/include/ROOT/span.hxx \
- /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
- /usr/include/c++/13/array /usr/include/c++/13/compare \
- /usr/include/c++/13/cassert /usr/include/assert.h \
- /usr/include/c++/13/utility /usr/include/c++/13/bits/stl_relops.h \
- /home/charles/garfieldpp/root/include/TVirtualQConnection.h \
- /home/charles/garfieldpp/root/include/TInterpreter.h \
- /home/charles/garfieldpp/root/include/TDataType.h \
- /home/charles/garfieldpp/root/include/TDictionary.h \
- /home/charles/garfieldpp/root/include/TNamed.h \
- /home/charles/garfieldpp/root/include/ESTLType.h \
- /home/charles/garfieldpp/root/include/TInterpreterValue.h \
- /usr/include/c++/13/map /usr/include/c++/13/bits/stl_tree.h \
- /usr/include/c++/13/bits/node_handle.h \
- /usr/include/c++/13/bits/stl_map.h \
- /usr/include/c++/13/bits/stl_multimap.h \
- /usr/include/c++/13/bits/erase_if.h \
- /home/charles/garfieldpp/root/include/GuiTypes.h \
- /usr/include/c++/13/climits \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
- /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
- /usr/include/x86_64-linux-gnu/bits/local_lim.h \
- /usr/include/linux/limits.h \
- /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
- /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/charles/garfieldpp/root/include/Buttons.h \
- /home/charles/garfieldpp/root/include/TAttBBox2D.h \
- /home/charles/garfieldpp/root/include/TAttCanvas.h \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/MediumMagboltz.hh \
- /usr/include/c++/13/mutex /usr/include/c++/13/bits/chrono.h \
- /usr/include/c++/13/ratio /usr/include/c++/13/cstdint \
- /usr/include/c++/13/limits /usr/include/c++/13/ctime \
- /usr/include/c++/13/bits/parse_numbers.h \
- /usr/include/c++/13/bits/std_mutex.h \
- /usr/include/c++/13/bits/unique_lock.h \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/MagboltzInterface.hh \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/MediumGas.hh \
- /usr/include/c++/13/bitset \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/Medium.hh \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/FundamentalConstants.hh \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/ParticleTypes.hh \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/ComponentAnalyticField.hh \
- /usr/include/c++/13/complex /usr/include/c++/13/cmath \
- /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /home/vitrum/Physics/root-install/include/TGenericClassInfo.h \
+ /home/vitrum/Physics/root-install/include/TSchemaHelper.h \
+ /home/vitrum/Physics/root-install/include/TIsAProxy.h \
+ /home/vitrum/Physics/root-install/include/TVirtualIsAProxy.h \
+ /home/vitrum/Physics/root-install/include/TStorage.h \
+ /home/vitrum/Physics/root-install/include/TVersionCheck.h \
+ /home/vitrum/Physics/root-install/include/RVersion.h \
+ /home/vitrum/Physics/root-install/include/TAttLine.h \
+ /home/vitrum/Physics/root-install/include/TAttFill.h \
+ /home/vitrum/Physics/root-install/include/TAttPad.h \
+ /home/vitrum/Physics/root-install/include/TQObject.h \
+ /home/vitrum/Physics/root-install/include/TList.h \
+ /home/vitrum/Physics/root-install/include/TSeqCollection.h \
+ /home/vitrum/Physics/root-install/include/TCollection.h \
+ /home/vitrum/Physics/root-install/include/TIterator.h \
+ /home/vitrum/Physics/root-install/include/TString.h \
+ /home/vitrum/Physics/root-install/include/TMathBase.h \
+ /usr/include/c++/13/cmath /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
@@ -265,7 +204,8 @@ CMakeFiles/gainSim.dir/gainSim.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/c++/13/bits/specfun.h /usr/include/c++/13/tr1/gamma.tcc \
+ /usr/include/c++/13/bits/specfun.h /usr/include/c++/13/limits \
+ /usr/include/c++/13/tr1/gamma.tcc \
  /usr/include/c++/13/tr1/special_function_util.h \
  /usr/include/c++/13/tr1/bessel_function.tcc \
  /usr/include/c++/13/tr1/beta_function.tcc \
@@ -276,52 +216,115 @@ CMakeFiles/gainSim.dir/gainSim.cc.o: \
  /usr/include/c++/13/tr1/modified_bessel_func.tcc \
  /usr/include/c++/13/tr1/poly_hermite.tcc \
  /usr/include/c++/13/tr1/poly_laguerre.tcc \
- /usr/include/c++/13/tr1/riemann_zeta.tcc /usr/include/c++/13/sstream \
+ /usr/include/c++/13/tr1/riemann_zeta.tcc /usr/include/c++/13/algorithm \
+ /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/algorithmfwd.h \
+ /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/uniform_int_dist.h \
+ /usr/include/c++/13/bits/stl_tempbuf.h \
+ /usr/include/c++/13/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/13/pstl/execution_defs.h \
+ /home/vitrum/Physics/root-install/include/ROOT/TypeTraits.hxx \
+ /usr/include/c++/13/memory \
+ /usr/include/c++/13/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/13/bits/align.h /usr/include/c++/13/bits/unique_ptr.h \
+ /usr/include/c++/13/bits/shared_ptr.h \
+ /usr/include/c++/13/bits/shared_ptr_base.h \
+ /usr/include/c++/13/bits/allocated_ptr.h \
+ /usr/include/c++/13/ext/aligned_buffer.h \
+ /usr/include/c++/13/ext/concurrence.h \
+ /usr/include/c++/13/bits/shared_ptr_atomic.h \
+ /usr/include/c++/13/backward/auto_ptr.h \
+ /usr/include/c++/13/pstl/glue_memory_defs.h /usr/include/c++/13/cstdarg \
+ /home/vitrum/Physics/root-install/include/TVirtualRWMutex.h \
+ /home/vitrum/Physics/root-install/include/TVirtualMutex.h \
+ /home/vitrum/Physics/root-install/include/ROOT/RRangeCast.hxx \
+ /home/vitrum/Physics/root-install/include/ROOT/RSpan.hxx \
+ /home/vitrum/Physics/root-install/include/ROOT/span.hxx \
+ /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
+ /usr/include/c++/13/array /usr/include/c++/13/compare \
+ /usr/include/c++/13/cassert /usr/include/assert.h \
+ /usr/include/c++/13/utility /usr/include/c++/13/bits/stl_relops.h \
+ /home/vitrum/Physics/root-install/include/TVirtualQConnection.h \
+ /home/vitrum/Physics/root-install/include/TInterpreter.h \
+ /home/vitrum/Physics/root-install/include/TDataType.h \
+ /home/vitrum/Physics/root-install/include/TDictionary.h \
+ /home/vitrum/Physics/root-install/include/TNamed.h \
+ /home/vitrum/Physics/root-install/include/ESTLType.h \
+ /home/vitrum/Physics/root-install/include/TInterpreterValue.h \
+ /usr/include/c++/13/map /usr/include/c++/13/bits/stl_tree.h \
+ /usr/include/c++/13/bits/node_handle.h \
+ /usr/include/c++/13/bits/stl_map.h \
+ /usr/include/c++/13/bits/stl_multimap.h \
+ /usr/include/c++/13/bits/erase_if.h \
+ /home/vitrum/Physics/root-install/include/GuiTypes.h \
+ /usr/include/c++/13/climits \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+ /home/vitrum/Physics/root-install/include/Buttons.h \
+ /home/vitrum/Physics/root-install/include/TAttBBox2D.h \
+ /home/vitrum/Physics/root-install/include/TAttCanvas.h \
+ /home/vitrum/Physics/garfield/install/include/Garfield/MediumMagboltz.hh \
+ /usr/include/c++/13/mutex /usr/include/c++/13/bits/chrono.h \
+ /usr/include/c++/13/ratio /usr/include/c++/13/cstdint \
+ /usr/include/c++/13/ctime /usr/include/c++/13/bits/parse_numbers.h \
+ /usr/include/c++/13/bits/std_mutex.h \
+ /usr/include/c++/13/bits/unique_lock.h \
+ /home/vitrum/Physics/garfield/install/include/Garfield/MagboltzInterface.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/MediumGas.hh \
+ /usr/include/c++/13/bitset \
+ /home/vitrum/Physics/garfield/install/include/Garfield/Medium.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/FundamentalConstants.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/ParticleTypes.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/ComponentAnalyticField.hh \
+ /usr/include/c++/13/complex /usr/include/c++/13/sstream \
  /usr/include/c++/13/bits/sstream.tcc \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/Component.hh \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/Symmetry.hh \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/Exceptions.hh \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/Sensor.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/Component.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/Symmetry.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/Exceptions.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/Sensor.hh \
  /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
  /usr/include/c++/13/unordered_map \
  /usr/include/c++/13/bits/unordered_map.h \
  /usr/include/c++/13/bits/hashtable.h \
  /usr/include/c++/13/bits/hashtable_policy.h \
  /usr/include/c++/13/bits/enable_special_members.h \
- /usr/include/c++/13/bits/stl_algo.h \
- /usr/include/c++/13/bits/algorithmfwd.h \
- /usr/include/c++/13/bits/stl_heap.h \
- /usr/include/c++/13/bits/uniform_int_dist.h \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/AvalancheMicroscopic.hh \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/AvalancheMicroscopicTypes.hh \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/MultiProcessInterface.hh \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/ViewMedium.hh \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/ViewBase.hh \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/TrackHeed.hh \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/Track.hh \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/DriftLineRKF.hh \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/ViewDrift.hh \
- /home/charles/garfieldpp/root/include/Rtypes.h \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/ViewCell.hh \
- /home/charles/garfieldpp/root/include/TGeoManager.h \
+ /home/vitrum/Physics/garfield/install/include/Garfield/AvalancheMicroscopic.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/AvalancheMicroscopicTypes.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/MultiProcessInterface.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/ViewMedium.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/ViewBase.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/TrackHeed.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/Track.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/DriftLineRKF.hh \
+ /home/vitrum/Physics/garfield/install/include/Garfield/ViewDrift.hh \
+ /home/vitrum/Physics/root-install/include/Rtypes.h \
+ /home/vitrum/Physics/garfield/install/include/Garfield/ViewCell.hh \
+ /home/vitrum/Physics/root-install/include/TGeoManager.h \
  /usr/include/c++/13/thread /usr/include/c++/13/bits/std_thread.h \
  /usr/include/c++/13/bits/this_thread_sleep.h \
- /home/charles/garfieldpp/root/include/TObjArray.h \
- /home/charles/garfieldpp/root/include/TGeoNavigator.h \
- /home/charles/garfieldpp/root/include/TGeoCache.h \
- /home/charles/garfieldpp/root/include/TGeoNode.h \
- /home/charles/garfieldpp/root/include/TGeoAtt.h \
- /home/charles/garfieldpp/root/include/TGeoVolume.h \
- /home/charles/garfieldpp/root/include/TAtt3D.h \
- /home/charles/garfieldpp/root/include/TGeoMedium.h \
- /home/charles/garfieldpp/root/include/TGeoMaterial.h \
- /home/charles/garfieldpp/root/include/TNamed.h \
- /home/charles/garfieldpp/root/include/TAttFill.h \
- /home/charles/garfieldpp/root/include/TList.h \
- /home/charles/garfieldpp/root/include/TGeoElement.h \
- /home/charles/garfieldpp/root/include/TAttMarker.h \
- /home/charles/garfieldpp/root/include/TGeoShape.h \
- /home/charles/garfieldpp/root/include/TGeoPatternFinder.h \
- /home/charles/garfieldpp/root/include/TGeoStateInfo.h \
- /home/charles/garfieldpp/root/include/TGeoMatrix.h \
- /home/charles/garfieldpp/garfield_source/install/include/Garfield/ViewSignal.hh
+ /home/vitrum/Physics/root-install/include/TObjArray.h \
+ /home/vitrum/Physics/root-install/include/TGeoNavigator.h \
+ /home/vitrum/Physics/root-install/include/TGeoCache.h \
+ /home/vitrum/Physics/root-install/include/TGeoNode.h \
+ /home/vitrum/Physics/root-install/include/TGeoAtt.h \
+ /home/vitrum/Physics/root-install/include/TGeoVolume.h \
+ /home/vitrum/Physics/root-install/include/TAtt3D.h \
+ /home/vitrum/Physics/root-install/include/TGeoMedium.h \
+ /home/vitrum/Physics/root-install/include/TGeoMaterial.h \
+ /home/vitrum/Physics/root-install/include/TNamed.h \
+ /home/vitrum/Physics/root-install/include/TAttFill.h \
+ /home/vitrum/Physics/root-install/include/TList.h \
+ /home/vitrum/Physics/root-install/include/TGeoElement.h \
+ /home/vitrum/Physics/root-install/include/TAttMarker.h \
+ /home/vitrum/Physics/root-install/include/TGeoShape.h \
+ /home/vitrum/Physics/root-install/include/TGeoPatternFinder.h \
+ /home/vitrum/Physics/root-install/include/TGeoStateInfo.h \
+ /home/vitrum/Physics/root-install/include/TGeoMatrix.h \
+ /home/vitrum/Physics/garfield/install/include/Garfield/ViewSignal.hh

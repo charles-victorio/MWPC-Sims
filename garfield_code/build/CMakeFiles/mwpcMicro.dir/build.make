@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/charles/geant4test2/proj1/garfield_code
+CMAKE_SOURCE_DIR = /home/vitrum/Physics/MWPC-Sims/garfield_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/charles/geant4test2/proj1/garfield_code/build
+CMAKE_BINARY_DIR = /home/vitrum/Physics/MWPC-Sims/garfield_code/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/mwpcMicro.dir/depend.make
@@ -73,18 +73,18 @@ CMakeFiles/mwpcMicro.dir/codegen:
 .PHONY : CMakeFiles/mwpcMicro.dir/codegen
 
 CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.o: CMakeFiles/mwpcMicro.dir/flags.make
-CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.o: /home/charles/geant4test2/proj1/garfield_code/mwpcMicro.cc
+CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.o: /home/vitrum/Physics/MWPC-Sims/garfield_code/mwpcMicro.cc
 CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.o: CMakeFiles/mwpcMicro.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/charles/geant4test2/proj1/garfield_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.o -MF CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.o.d -o CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.o -c /home/charles/geant4test2/proj1/garfield_code/mwpcMicro.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vitrum/Physics/MWPC-Sims/garfield_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.o -MF CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.o.d -o CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.o -c /home/vitrum/Physics/MWPC-Sims/garfield_code/mwpcMicro.cc
 
 CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/charles/geant4test2/proj1/garfield_code/mwpcMicro.cc > CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vitrum/Physics/MWPC-Sims/garfield_code/mwpcMicro.cc > CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.i
 
 CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/charles/geant4test2/proj1/garfield_code/mwpcMicro.cc -o CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vitrum/Physics/MWPC-Sims/garfield_code/mwpcMicro.cc -o CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.s
 
 # Object files for target mwpcMicro
 mwpcMicro_OBJECTS = \
@@ -96,32 +96,32 @@ mwpcMicro_EXTERNAL_OBJECTS =
 mwpcMicro: CMakeFiles/mwpcMicro.dir/mwpcMicro.cc.o
 mwpcMicro: CMakeFiles/mwpcMicro.dir/build.make
 mwpcMicro: CMakeFiles/mwpcMicro.dir/compiler_depend.ts
-mwpcMicro: /home/charles/garfieldpp/garfield_source/install/lib/libGarfield.so.0.3
-mwpcMicro: /home/charles/garfieldpp/root/lib/libTree.so
-mwpcMicro: /home/charles/garfieldpp/root/lib/libGdml.so
-mwpcMicro: /home/charles/garfieldpp/root/lib/libGeom.so
-mwpcMicro: /home/charles/garfieldpp/root/lib/libXMLIO.so
-mwpcMicro: /home/charles/garfieldpp/root/lib/libGraf3d.so
-mwpcMicro: /home/charles/garfieldpp/root/lib/libGpad.so
-mwpcMicro: /home/charles/garfieldpp/root/lib/libGraf.so
-mwpcMicro: /home/charles/garfieldpp/root/lib/libHist.so
-mwpcMicro: /home/charles/garfieldpp/root/lib/libMatrix.so
-mwpcMicro: /home/charles/garfieldpp/garfield_source/install/lib/libHeed.so
-mwpcMicro: /home/charles/garfieldpp/garfield_source/install/lib/libGarfieldRandom.so
-mwpcMicro: /home/charles/garfieldpp/root/lib/libMathCore.so
-mwpcMicro: /home/charles/garfieldpp/root/lib/libImt.so
-mwpcMicro: /home/charles/garfieldpp/root/lib/libMultiProc.so
-mwpcMicro: /home/charles/garfieldpp/root/lib/libNet.so
-mwpcMicro: /home/charles/garfieldpp/root/lib/libRIO.so
-mwpcMicro: /home/charles/garfieldpp/root/lib/libThread.so
-mwpcMicro: /home/charles/garfieldpp/root/lib/libCore.so
-mwpcMicro: /home/charles/garfieldpp/garfield_source/install/lib/libMagboltz.so.11.19
-mwpcMicro: /home/charles/garfieldpp/garfield_source/install/lib/libneBEM.so
-mwpcMicro: /home/charles/garfieldpp/garfield_source/install/lib/libDegrade.so.3.17
+mwpcMicro: /home/vitrum/Physics/garfield/install/lib/libGarfield.so.0.3
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libTree.so
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libGdml.so
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libGeom.so
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libXMLIO.so
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libGraf3d.so
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libGpad.so
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libGraf.so
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libHist.so
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libMatrix.so
+mwpcMicro: /home/vitrum/Physics/garfield/install/lib/libHeed.so
+mwpcMicro: /home/vitrum/Physics/garfield/install/lib/libGarfieldRandom.so
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libMathCore.so
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libImt.so
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libMultiProc.so
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libNet.so
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libRIO.so
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libThread.so
+mwpcMicro: /home/vitrum/Physics/root-install/lib/libCore.so
+mwpcMicro: /home/vitrum/Physics/garfield/install/lib/libMagboltz.so.11.19
+mwpcMicro: /home/vitrum/Physics/garfield/install/lib/libneBEM.so
+mwpcMicro: /home/vitrum/Physics/garfield/install/lib/libDegrade.so.3.17
 mwpcMicro: /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so
 mwpcMicro: /usr/lib/x86_64-linux-gnu/libpthread.a
 mwpcMicro: CMakeFiles/mwpcMicro.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/charles/geant4test2/proj1/garfield_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mwpcMicro"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vitrum/Physics/MWPC-Sims/garfield_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mwpcMicro"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mwpcMicro.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -133,6 +133,6 @@ CMakeFiles/mwpcMicro.dir/clean:
 .PHONY : CMakeFiles/mwpcMicro.dir/clean
 
 CMakeFiles/mwpcMicro.dir/depend:
-	cd /home/charles/geant4test2/proj1/garfield_code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/charles/geant4test2/proj1/garfield_code /home/charles/geant4test2/proj1/garfield_code /home/charles/geant4test2/proj1/garfield_code/build /home/charles/geant4test2/proj1/garfield_code/build /home/charles/geant4test2/proj1/garfield_code/build/CMakeFiles/mwpcMicro.dir/DependInfo.cmake "--color=$(COLOR)" mwpcMicro
+	cd /home/vitrum/Physics/MWPC-Sims/garfield_code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vitrum/Physics/MWPC-Sims/garfield_code /home/vitrum/Physics/MWPC-Sims/garfield_code /home/vitrum/Physics/MWPC-Sims/garfield_code/build /home/vitrum/Physics/MWPC-Sims/garfield_code/build /home/vitrum/Physics/MWPC-Sims/garfield_code/build/CMakeFiles/mwpcMicro.dir/DependInfo.cmake "--color=$(COLOR)" mwpcMicro
 .PHONY : CMakeFiles/mwpcMicro.dir/depend
 

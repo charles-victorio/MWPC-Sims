@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/charles/geant4test2/proj1/garfield_code
+CMAKE_SOURCE_DIR = /home/vitrum/Physics/MWPC-Sims/garfield_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/charles/geant4test2/proj1/garfield_code/build
+CMAKE_BINARY_DIR = /home/vitrum/Physics/MWPC-Sims/garfield_code/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/gainSim.dir/depend.make
@@ -73,18 +73,18 @@ CMakeFiles/gainSim.dir/codegen:
 .PHONY : CMakeFiles/gainSim.dir/codegen
 
 CMakeFiles/gainSim.dir/gainSim.cc.o: CMakeFiles/gainSim.dir/flags.make
-CMakeFiles/gainSim.dir/gainSim.cc.o: /home/charles/geant4test2/proj1/garfield_code/gainSim.cc
+CMakeFiles/gainSim.dir/gainSim.cc.o: /home/vitrum/Physics/MWPC-Sims/garfield_code/gainSim.cc
 CMakeFiles/gainSim.dir/gainSim.cc.o: CMakeFiles/gainSim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/charles/geant4test2/proj1/garfield_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gainSim.dir/gainSim.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gainSim.dir/gainSim.cc.o -MF CMakeFiles/gainSim.dir/gainSim.cc.o.d -o CMakeFiles/gainSim.dir/gainSim.cc.o -c /home/charles/geant4test2/proj1/garfield_code/gainSim.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vitrum/Physics/MWPC-Sims/garfield_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gainSim.dir/gainSim.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gainSim.dir/gainSim.cc.o -MF CMakeFiles/gainSim.dir/gainSim.cc.o.d -o CMakeFiles/gainSim.dir/gainSim.cc.o -c /home/vitrum/Physics/MWPC-Sims/garfield_code/gainSim.cc
 
 CMakeFiles/gainSim.dir/gainSim.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gainSim.dir/gainSim.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/charles/geant4test2/proj1/garfield_code/gainSim.cc > CMakeFiles/gainSim.dir/gainSim.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vitrum/Physics/MWPC-Sims/garfield_code/gainSim.cc > CMakeFiles/gainSim.dir/gainSim.cc.i
 
 CMakeFiles/gainSim.dir/gainSim.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gainSim.dir/gainSim.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/charles/geant4test2/proj1/garfield_code/gainSim.cc -o CMakeFiles/gainSim.dir/gainSim.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vitrum/Physics/MWPC-Sims/garfield_code/gainSim.cc -o CMakeFiles/gainSim.dir/gainSim.cc.s
 
 # Object files for target gainSim
 gainSim_OBJECTS = \
@@ -96,32 +96,32 @@ gainSim_EXTERNAL_OBJECTS =
 gainSim: CMakeFiles/gainSim.dir/gainSim.cc.o
 gainSim: CMakeFiles/gainSim.dir/build.make
 gainSim: CMakeFiles/gainSim.dir/compiler_depend.ts
-gainSim: /home/charles/garfieldpp/garfield_source/install/lib/libGarfield.so.0.3
-gainSim: /home/charles/garfieldpp/root/lib/libTree.so
-gainSim: /home/charles/garfieldpp/root/lib/libGdml.so
-gainSim: /home/charles/garfieldpp/root/lib/libGeom.so
-gainSim: /home/charles/garfieldpp/root/lib/libXMLIO.so
-gainSim: /home/charles/garfieldpp/root/lib/libGraf3d.so
-gainSim: /home/charles/garfieldpp/root/lib/libGpad.so
-gainSim: /home/charles/garfieldpp/root/lib/libGraf.so
-gainSim: /home/charles/garfieldpp/root/lib/libHist.so
-gainSim: /home/charles/garfieldpp/root/lib/libMatrix.so
-gainSim: /home/charles/garfieldpp/garfield_source/install/lib/libHeed.so
-gainSim: /home/charles/garfieldpp/garfield_source/install/lib/libGarfieldRandom.so
-gainSim: /home/charles/garfieldpp/root/lib/libMathCore.so
-gainSim: /home/charles/garfieldpp/root/lib/libImt.so
-gainSim: /home/charles/garfieldpp/root/lib/libMultiProc.so
-gainSim: /home/charles/garfieldpp/root/lib/libNet.so
-gainSim: /home/charles/garfieldpp/root/lib/libRIO.so
-gainSim: /home/charles/garfieldpp/root/lib/libThread.so
-gainSim: /home/charles/garfieldpp/root/lib/libCore.so
-gainSim: /home/charles/garfieldpp/garfield_source/install/lib/libMagboltz.so.11.19
-gainSim: /home/charles/garfieldpp/garfield_source/install/lib/libneBEM.so
-gainSim: /home/charles/garfieldpp/garfield_source/install/lib/libDegrade.so.3.17
+gainSim: /home/vitrum/Physics/garfield/install/lib/libGarfield.so.0.3
+gainSim: /home/vitrum/Physics/root-install/lib/libTree.so
+gainSim: /home/vitrum/Physics/root-install/lib/libGdml.so
+gainSim: /home/vitrum/Physics/root-install/lib/libGeom.so
+gainSim: /home/vitrum/Physics/root-install/lib/libXMLIO.so
+gainSim: /home/vitrum/Physics/root-install/lib/libGraf3d.so
+gainSim: /home/vitrum/Physics/root-install/lib/libGpad.so
+gainSim: /home/vitrum/Physics/root-install/lib/libGraf.so
+gainSim: /home/vitrum/Physics/root-install/lib/libHist.so
+gainSim: /home/vitrum/Physics/root-install/lib/libMatrix.so
+gainSim: /home/vitrum/Physics/garfield/install/lib/libHeed.so
+gainSim: /home/vitrum/Physics/garfield/install/lib/libGarfieldRandom.so
+gainSim: /home/vitrum/Physics/root-install/lib/libMathCore.so
+gainSim: /home/vitrum/Physics/root-install/lib/libImt.so
+gainSim: /home/vitrum/Physics/root-install/lib/libMultiProc.so
+gainSim: /home/vitrum/Physics/root-install/lib/libNet.so
+gainSim: /home/vitrum/Physics/root-install/lib/libRIO.so
+gainSim: /home/vitrum/Physics/root-install/lib/libThread.so
+gainSim: /home/vitrum/Physics/root-install/lib/libCore.so
+gainSim: /home/vitrum/Physics/garfield/install/lib/libMagboltz.so.11.19
+gainSim: /home/vitrum/Physics/garfield/install/lib/libneBEM.so
+gainSim: /home/vitrum/Physics/garfield/install/lib/libDegrade.so.3.17
 gainSim: /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so
 gainSim: /usr/lib/x86_64-linux-gnu/libpthread.a
 gainSim: CMakeFiles/gainSim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/charles/geant4test2/proj1/garfield_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable gainSim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vitrum/Physics/MWPC-Sims/garfield_code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable gainSim"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gainSim.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -133,6 +133,6 @@ CMakeFiles/gainSim.dir/clean:
 .PHONY : CMakeFiles/gainSim.dir/clean
 
 CMakeFiles/gainSim.dir/depend:
-	cd /home/charles/geant4test2/proj1/garfield_code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/charles/geant4test2/proj1/garfield_code /home/charles/geant4test2/proj1/garfield_code /home/charles/geant4test2/proj1/garfield_code/build /home/charles/geant4test2/proj1/garfield_code/build /home/charles/geant4test2/proj1/garfield_code/build/CMakeFiles/gainSim.dir/DependInfo.cmake "--color=$(COLOR)" gainSim
+	cd /home/vitrum/Physics/MWPC-Sims/garfield_code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vitrum/Physics/MWPC-Sims/garfield_code /home/vitrum/Physics/MWPC-Sims/garfield_code /home/vitrum/Physics/MWPC-Sims/garfield_code/build /home/vitrum/Physics/MWPC-Sims/garfield_code/build /home/vitrum/Physics/MWPC-Sims/garfield_code/build/CMakeFiles/gainSim.dir/DependInfo.cmake "--color=$(COLOR)" gainSim
 .PHONY : CMakeFiles/gainSim.dir/depend
 

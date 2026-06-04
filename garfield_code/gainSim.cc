@@ -239,18 +239,16 @@ int main() {
     track.SetEnergy(170.e9);
 
     // RKF integration
-    DriftLineRKF drift(&sensor);
-    drift.SetGainFluctuationsPolya(0., 20000.);
-    drift.EnableIonTail(true); // this is default on. not calling this function means ion tail will be enabled
+    //DriftLineRKF drift(&sensor);
+    //drift.SetGainFluctuationsPolya(0., 20000.);
+    //drift.EnableIonTail(true); // this is default on. not calling this function means ion tail will be enabled
 
-    // AvalancheMicroscopic aval(&sensor);
-
-    // aval.SetIonTransport(true);
+    AvalancheMicroscopic aval(&sensor);
 
     TCanvas *canvas = new TCanvas("canvas", "", 600, 600);
     ViewDrift driftView;
     driftView.SetCanvas(canvas);
-    drift.EnablePlotting(&driftView);
+    aval.EnablePlotting(&driftView);
     track.EnablePlotting(&driftView);
     driftView.SetColourElectrons(3);
     driftView.SetColourIons(4);
@@ -267,14 +265,14 @@ int main() {
     std::size_t ne = 0;
     for (const auto &cluster : track.GetClusters()) {
         for (const auto &electron : cluster.electrons) {
-            drift.DriftElectron(electron.x, electron.y, electron.z, electron.t);
+            //drift.DriftElectron(electron.x, electron.y, electron.z, electron.t);
             std::cout << "drifting electron at time " << electron.t << std::endl;
             ne += 1;
             
-            // aval.AvalancheElectron(electron.x, electron.y, electron.z, electron.t, 0, 0, 0, 0);
-            // int ne, ni;
-            // aval.GetAvalancheSize(ne, ni);
-            // std::cout << "ne: " << ne << ", ni: " << ni << std::endl; 
+            aval.AvalancheElectron(electron.x, electron.y, electron.z, electron.t, 0, 0, 0, 0);
+            int neA, niA;
+            aval.GetAvalancheSize(neA, niA);
+            std::cout << "ne: " << neA << ", ni: " << niA << std::endl; 
         }
     }
     std::cout << "number of electrons: " << ne << std::endl;

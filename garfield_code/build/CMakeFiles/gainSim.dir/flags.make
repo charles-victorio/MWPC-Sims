@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DROOT_SUPPORT_CLAD
 
-CXX_INCLUDES = -isystem /home/charles/garfieldpp/garfield_source/install/include -isystem /home/charles/garfieldpp/root/include
+CXX_INCLUDES = -isystem /home/vitrum/Physics/garfield/install/include -isystem /home/vitrum/Physics/root-install/include
 
 CXX_FLAGS = -fopenmp
 
