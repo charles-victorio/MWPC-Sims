@@ -1,0 +1,81 @@
+my rsync
+
+rsync -avP --exclude='build/' --exclude='garfield_code/build/' --exclude='.git/' --exclude='.venv/' --exclude="*.sif" --exclude="MWPC_v1/*" --exclude='.vscode' --exclude='Dockerfile' --exclude="external_bins/*" --exclude ="*/output*/" /home/charles/geant4test2/proj1/ h2:~/MWPC-Simulation
+
+my qsub
+
+jobid=$(qsub -sync y scripts/run.sh "./mwpcMicro" | tee /dev/tty | awk '{print $3}'); less logs/run.sh.o$jobid
+
+
+----
+
+
+gain vs voltage table
+V,G,n
+2000,633.042,240
+2250,2714.35,276
+2500,11619.7,28678
+2750,50234.9,854
+3000,244508,1420
+
+gain vs voltage graph
+- maybe make violin plot/etc, or doesnt matter?
+- compare to literature
+
+voltage theta
+2500,0.158
+2750,0.239
+
+charge per track tables and histograms
+voltage,mean,mpv,q10,q99
+2500,133.29,75.68,3.57,606.23
+2750,605.30,221.90,14.03,2958.38
+
+signal vs time
+graphs, and
+
+// driftline 2500V
+peak |I|                : 4.573 fC/ns at t = 71.5 ns
+first electron arrival  : 7.5 ns
+slowest primary arrival : 88.5 ns
+time to peak            : 71.5 ns
+time to 1% of peak      : 428.5 ns
+ion-tail timescale tau  : 99.9 ns
+
+// driftline 2750V
+peak |I|                : 18.86 fC/ns at t = 66.5 ns
+first electron arrival  : 6.5 ns
+slowest primary arrival : 88.5 ns
+time to peak            : 66.5 ns
+time to 1% of peak      : 368.5 ns
+ion-tail timescale tau  : 80.3 ns
+
+
+generate more driftline sigvtime data, then need charge vs shaping time graphs
+---
+
+maybe cad model
+
+---
+future work {
+
+fc histogram
+-> need to figure out 5% 0's -> use CRY
+-> get good mpv fitting
+
+CRY for multiple particle behavior
+
+
+not on sim {
+experimental validation of values
+}
+}
+
+notes on how to determine monostable fixed-pulse width {
+lower bound:
+- shaper tail - how long it takes for signal to decay below threshold
+- ringing - how long it takes for ringing to go below threshold
+
+upper bound
+- dead time fraction - want small "what percentage of time is it dead time" DTF = event rate * dead time for one event
+}

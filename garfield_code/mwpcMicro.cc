@@ -12,6 +12,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <random>
 #include <vector>
 
 #include <TCanvas.h>
@@ -31,38 +32,48 @@
 using namespace Garfield;
 
 
-bool readTransferFunction(Sensor &sensor) {
-    std::ifstream infile;
-    infile.open("../data/mdt_elx_delta.txt");
-    if (!infile) {
-        std::cerr << "Could not read delta response function.\n";
-        return false;
-    }
-    std::vector<double> times;
-    std::vector<double> values;
-    while (!infile.eof()) {
-        double t = 0., f = 0.;
-        infile >> t >> f;
-        if (infile.eof() || infile.fail()) break;
-        times.push_back(1.e3 * t);
-        values.push_back(f);
-    }
-    infile.close();
-    sensor.SetTransferFunction(times, values);
-    return true;
-}
+// // iirc, meaningless outside of the particular instrumentation that the txt file is from
+// bool readTransferFunction(Sensor &sensor) {
+//     std::ifstream infile;
+//     infile.open("../data/mdt_elx_delta.txt");
+//     if (!infile) {
+//         std::cerr << "Could not read delta response function.\n";
+//         return false;
+//     }
+//     std::vector<double> times;
+//     std::vector<double> values;
+//     while (!infile.eof()) {
+//         double t = 0., f = 0.;
+//         infile >> t >> f;
+//         if (infile.eof() || infile.fail()) break;
+//         times.push_back(1.e3 * t);
+//         values.push_back(f);
+//     }
+//     infile.close();
+//     sensor.SetTransferFunction(times, values);
+//     return true;
+// }
 
-int main() {
-    // Only need to do once
-    // MediumMagboltz gas("ar", 93., "co2", 7.);
-    // gas.SetTemperature(293.15);
-    // gas.SetPressure(3 * 760.);
-    // gas.SetFieldGrid(100., 100000., 20, true);
-    // gas.GenerateGasTable(10);
-    // gas.WriteGasFile("ar_93_co2_7.gas");
+int main(int argc, char** argv) {
+
+    
+    const int taskID = std::atoi(argv[1]);
+    const double voltage = std::stod(argv[2]);
+    // const int nTasks = std::atoi(argv[2]);
+    // const int label = -14 + 2 * (taskID - 1);
+    const int voltageInt = std::atoi(argv[2]); // hack
+    const std::string output_dir = "../../output/charges_" + std::to_string(voltageInt) + "V/";
+    
+    // Garfield::RandomEngine.Seed(140805);
+    // std::random_device rd;
+    std::mt19937 gen(140805);
+
     MediumMagboltz gas;
-    gas.LoadGasFile("../data/ar_93_co2_7.gas");
+    gas.LoadGasFile("../data/ar_75_co2_25.gas");
     gas.LoadIonMobility("../data/IonMobility_Ar+_Ar.txt");
+    gas.SetMaxElectronEnergy(400.);
+    gas.EnablePenningTransfer();
+
 
     // ViewMedium mediumView(&gas);
     // mediumView.PlotElectronVelocity('e');
@@ -71,7 +82,7 @@ int main() {
     ComponentAnalyticField cmp;
     cmp.SetMedium(&gas);
     const double wireDiameter = 20.e-4; // [cm]
-    const double wireVoltage = 2000.; // 4000.; // 2730.;
+    const double wireVoltage = voltage; // 2000.; // 2730.;
     const double gap = 0.6;
     cmp.AddWire(0, 0, wireDiameter, wireVoltage, "s");
     cmp.AddPlaneY(gap, 0., "top");
@@ -85,7 +96,7 @@ int main() {
     const double tmin = -0.5 * tstep;
     const std::size_t nbins = 1000;
     sensor.SetTimeWindow(tmin, tstep, nbins);
-    if (!readTransferFunction(sensor)) return 0;
+    // if (!readTransferFunction(sensor)) return 0;
     sensor.ClearSignal();
     
     // Set up Heed
@@ -94,17 +105,19 @@ int main() {
     track.SetEnergy(170.e9);
 
     // RKF integration
-    DriftLineRKF drift(&sensor);
-    drift.SetGainFluctuationsPolya(0., 20000.);
-    drift.EnableIonTail(true); // this is default on. not calling this function means ion tail will be enabled
+    // DriftLineRKF drift(&sensor);
+    // drift.SetGainFluctuationsPolya(0., 20000.);
+    // drift.EnableIonTail(true); // this is default on. not calling this function means ion tail will be enabled
 
-    // AvalancheMicroscopic aval(&sensor);
+    AvalancheMicroscopic aval(&sensor);
     // aval.SetIonTransport(true);
     // how to make it handle ions? does it do that automatically? I assume it does since GetAvalancheSize gives you ni and sensor.GetIonInducedCharge works
 
+    // disable entire trajectory tracking to save memory
+    /*
     ViewDrift driftView;
-    drift.EnablePlotting(&driftView);
-    // aval.EnablePlotting(&driftView);
+    // drift.EnablePlotting(&driftView);
+    aval.EnablePlotting(&driftView);
     track.EnablePlotting(&driftView);
     driftView.SetColourElectrons(3);
     driftView.SetColourIons(4);
@@ -112,64 +125,93 @@ int main() {
     ViewCell cellView;
     cellView.SetCanvas(driftView.GetCanvas());
     cellView.SetComponent(&cmp);
+    */
 
     // Simulate a track
-    const double x0 = 0.14;
-    const double y0 = gap - 1.e-4;
-    track.NewTrack(x0, y0, 0, 0, 0, -1, 0);
-    std::cout << "number of clusters: " << track.GetClusters().size() << std::endl;
-    std::size_t nElectronsTracked = 0;
-    std::size_t cutoff = 5; // only gets earlier cluster
-    for (const auto &cluster : track.GetClusters()) {
-        Cluster:
-        for (const auto &electron : cluster.electrons) {
-            drift.DriftElectron(electron.x, electron.y, electron.z, electron.t);
-            
-            // if (nElectronsTracked >= cutoff) {
-            //     goto EnoughAlready;
-            // }
-            // aval.AvalancheElectron(electron.x, electron.y, electron.z, electron.t, 0, 0, 0, 0);
-            // std::cout << "drifting electron " << nElectronsTracked << " at time " << electron.t << std::endl;
-            // int ne, ni;
-            // aval.GetAvalancheSize(ne, ni);
-            // std::cout << "ne: " << ne << ", ni: " << ni << std::endl;
-            // nElectronsTracked++;
-            // if (ne > 1) {
-            //     goto Cluster; // only show at most one representative good (big ne) electron from each cluster
-            // }
+    const double xmax = pitch / 2 - 0.01; // 0.14;
+
+    std::uniform_real_distribution<double> xDist(-xmax, xmax);
+    std::uniform_real_distribution<double> alphaDist(-M_PI/2.0, M_PI/2.0);
+    std::uniform_real_distribution<double> rejDist(0.0, 1.0);
+
+
+    int tracks_per_executable = 20;
+    int trackID = (taskID - 1) * tracks_per_executable;
+    for (int i = 0; i < tracks_per_executable; i++) {
+        const std::string fname = output_dir + "charges_track_" + std::to_string(voltageInt) + "V_" + std::to_string(trackID) + ".csv";
+        std::ofstream charges_file(fname);
+        // std::ofstream charges_file("../output3000/c1.csv");
+
+        // const double x0 = 0.14;
+        // const double x0 = -0.14 + 0.02 * static_cast<double>(taskID - 1);
+        const double x0 = xDist(gen);
+        const double y0 = gap - 1.e-4;
+
+        double alpha;
+        while (true) {
+            alpha = alphaDist(gen);
+            double c = std::cos(alpha);
+            if (rejDist(gen) < c * c * c) break;  // accept with prob cos^3(alpha)
         }
+
+        double dx =  std::sin(alpha);
+        double dy = -std::cos(alpha);   // downward
+
+
+        const std::string label = output_dir + "track_" + std::to_string(voltageInt) + "V_" + std::to_string(trackID) + "_info.txt";
+        std::ofstream track_info_file(label.c_str());
+        track_info_file << x0 << " " << y0 << " " << dx << " " << dy << " " << voltage << " " << trackID << std::endl;
+        track_info_file.close();
+
+        
+        track.NewTrack(x0, y0, 0, 0, dx, dy, 0);
+        std::cout << "number of clusters: " << track.GetClusters().size() << std::endl;
+        int cluster_i = 0;
+        for (const auto &cluster : track.GetClusters()) {
+            int electron_i = 0;
+            for (const auto &electron : cluster.electrons) {
+                // drift.DriftElectron(electron.x, electron.y, electron.z, electron.t);
+
+                aval.AvalancheElectron(electron.x, electron.y, electron.z, electron.t, 0, 0, 0, 0);
+                int ne, ni;
+                aval.GetAvalancheSize(ne, ni);
+                charges_file << trackID << "," << ne << "," << ni << std::endl;
+                // track_info_file << "Cluster #" << cluster_i << " electron #" << electron_i << " has ne = " << ne << std::endl; 
+                electron_i++;
+            }
+            cluster_i++;
+        }
+
+
+        // sensor.GetIonSignal("s", i); // in loop
+
+        /*
+        // draw the mwpc with the track and the drifting
+        cellView.Plot2d();
+        driftView.Plot(true, false);
+        // std::string imgFname1 = "../output4000/drift_lines" + std::to_string(label) + ".png";
+        // driftView.GetCanvas()->SaveAs(imgFname1.c_str());
+        driftView.GetCanvas()->SaveAs("../output3000/drift_lines.png");
+        
+        ViewSignal signalView(&sensor);
+        signalView.PlotSignal("s");
+        std::string imgFname2 = "../output4000/signal" + std::to_string(label) + ".png";
+        signalView.GetCanvas()->SaveAs(imgFname2.c_str());
+        */
+
+        // sensor.ConvoluteSignals();
+        // int nt = 0;
+        // if (!sensor.ComputeThresholdCrossings(-2., "s", nt)) continue;
+        // if (sensor.ComputeThresholdCrossings(-2., "s", nt)) {
+        //     ViewSignal signalView(&sensor);
+        //     signalView.PlotSignal("s");
+        //     std::string imgFname3 = "../output2/signal_convolved" + std::to_string(label) + ".png";
+        //     signalView.GetCanvas()->SaveAs(imgFname3.c_str());
+        // }
+
+        
+        charges_file.close();
+        trackID++;
     }
-    EnoughAlready:
 
-    // sensor.GetIonSignal("s", i); // in loop
-
-    // draw the mwpc with the track and the drifting
-    cellView.Plot2d();
-    driftView.Plot(true, false);
-    std::cout << "here 1" << std::endl;
-    driftView.GetCanvas()->SaveAs("../output/drift_lines.png");
-
-    std::cout << "a" << std::endl; std::exit(0);
-
-    ViewSignal signalView(&sensor);
-    std::cout << "b" << std::endl; std::exit(0);
-    signalView.PlotSignal("s");
-    std::cout << "c" << std::endl; std::exit(0);
-    std::cout << "here 2" << std::endl;
-    std::cout << "d" << std::endl; std::exit(0);
-    signalView.GetCanvas()->SaveAs("../output/signal.png");
-    std::cout << "here 3" << std::endl;
-    std::cout << "e" << std::endl; std::exit(0);
-
-    // sensor.ConvoluteSignals();
-    // int nt = 0;
-    // // if (!sensor.ComputeThresholdCrossings(-2., "s", nt)) continue;
-    // if (sensor.ComputeThresholdCrossings(-2., "s", nt)) {
-    //     ViewSignal signalView(&sensor);
-    //     signalView.PlotSignal("s");
-    //     signalView.GetCanvas()->SaveAs("../output/signal.png");
-    // }
-
-    // if the table gets expanded, the program doesn't terminate without ctrl-c
-    std::exit(0); // also doesnt work
 }

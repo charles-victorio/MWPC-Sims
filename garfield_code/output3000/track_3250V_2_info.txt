@@ -1,0 +1,6 @@
+-0.00659767 0.5999 0.213919 -0.976851 3250
+Cluster #0 electron #0 has ne = 0
+Cluster #1 electron #0 has ne = 43385
+Cluster #1 electron #1 has ne = 1887612
+Cluster #1 electron #2 has ne = 765791
+Cluster #1 electron #3 has ne = 628932

@@ -1,0 +1,24 @@
+-0.00659767 0.5999 0.213919 -0.976851 2000
+Cluster #0 electron #0 has ne = 420
+Cluster #1 electron #0 has ne = 0
+Cluster #2 electron #0 has ne = 0
+Cluster #2 electron #1 has ne = 497
+Cluster #2 electron #2 has ne = 0
+Cluster #2 electron #3 has ne = 94
+Cluster #2 electron #4 has ne = 1359
+Cluster #2 electron #5 has ne = 0
+Cluster #2 electron #6 has ne = 2014
+Cluster #3 electron #0 has ne = 456
+Cluster #4 electron #0 has ne = 213
+Cluster #5 electron #0 has ne = 1459
+Cluster #6 electron #0 has ne = 892
+Cluster #7 electron #0 has ne = 417
+Cluster #7 electron #1 has ne = 1147
+Cluster #8 electron #0 has ne = 1136
+Cluster #9 electron #0 has ne = 2101
+Cluster #10 electron #0 has ne = 502
+Cluster #11 electron #0 has ne = 0
+Cluster #12 electron #0 has ne = 158
+Cluster #13 electron #0 has ne = 1847
+Cluster #14 electron #0 has ne = 0
+Cluster #15 electron #0 has ne = 726
